@@ -1,1 +1,1 @@
-Algorithms in Julia
+Algorithms in Julia (and sometimes javascript)
