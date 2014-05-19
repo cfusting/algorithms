@@ -40,9 +40,21 @@ function selectLastPivot(a, l, r) {
     return(r - 1);
 }
 
-function selectMedianPivot(a, l r) {
-    var v = a.splice(l, r);
-    
+function selectMedianPivot(a, l, r) {
+    var m = Math.floor((l + r) / 2);
+    var v = [];
+    v[0] = a[l];
+    v[1] = a[m];
+    v[2] = a[r];
+    v.sort();
+    var p = v[1];
+    if (a[l] == p) {
+        return(l);
+    } else if (a[m] == p) {
+        return(m);
+    } else {
+        return(r);
+    }
 }
 
 var a = [3,9,8,4,6,10,2,5,7,1];
