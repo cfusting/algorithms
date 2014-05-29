@@ -10,10 +10,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        AdjList adj = new AdjList("/home/elpinguino/algorithms/graphs/kargerMinCut.txt");
     }
 
-    public List<List<Integer>> readCsv() {
+    private static List<List<Integer>> readCsv() {
         String file = "/home/elpinguino/algorithms/graphs/kargerMinCut.txt";
         BufferedReader br;
         String line;
@@ -39,15 +39,5 @@ public class Main {
             ex.printStackTrace();
         }
         return(linesFields);
-    }
-
-    public void build(List<List<Integer>> linesFields) {
-        List<Edge> edges = new ArrayList<Edge>();
-        for (List<Integer> line : linesFields) {
-            List<>
-            for (Integer field : line) {
-
-            }
-        }
     }
 }
