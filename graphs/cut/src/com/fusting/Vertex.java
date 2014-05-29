@@ -1,5 +1,6 @@
 package com.fusting;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,11 +8,18 @@ import java.util.List;
  */
 public class Vertex {
 
-    private Integer index;
-    private List<Edge> edges;
+    private Integer id;
+    private List<Edge> edges = new ArrayList<Edge>();
 
-    public Vertex(Integer index) {
-        this.index = index;
+    public Vertex(int id) {
+        this.id = id;
     }
 
+    public void addEdge(Edge edge) {
+        edges.add(edge);
+    }
+
+    public int getId() {
+        return id;
+    }
 }
