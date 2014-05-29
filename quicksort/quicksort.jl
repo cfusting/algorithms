@@ -50,9 +50,10 @@ function prt!(a, l, r)
     return(i - 1)
 end
 
-a = readcsv("qs1000.txt", Int64)
+a = readcsv("QuickSort.txt", Int64)
 b = copy(a)
 c = copy(a)
+d = copy(a)
 sanity = sortrows(a)
 
 using Base.Test
@@ -77,3 +78,5 @@ medianpivottotal = qs!(c, 1, length(c), getmedianpivot)
 println("Comparisons using first element as pivot: $firstpivottotal")
 println("Comparisons using last element as pivot: $lastpivottotal")
 println("Comparisons using median element as pivot: $medianpivottotal")
+
+@time qs!(d, 1, length(d), getmedianpivot)

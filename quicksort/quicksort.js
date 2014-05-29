@@ -57,10 +57,8 @@ function selectMedianPivot(a, l, r) {
     }
 }
 
-var a = [3,9,8,4,6,10,2,5,7,1];
+a = [];
 var csv = require('fast-csv');
 csv.fromPath('qs10.txt').on('record', function(data) { a.push(parseInt(data)) });
-console.log(a);
-var cp = qs(a, 0, a.length, selectLastPivot);
-console.log(a);
+var cp = qs(a, 0, a.length, selectFirstPivot);
 console.log(cp);
